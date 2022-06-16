@@ -1,25 +1,38 @@
 import { Link } from "react-router-dom";
 
-function LoginForm() {
+function SignupForm() {
   return (
     <div className="flex flex-wrap w-full">
-      <div className="flex content-between w-full mt-4">
+      <div className="flex content-between w-full mt-8">
         <label for="username" className="pr-4 w-full">
           Email:
         </label>
         <input
-          type="text"
+          type="email"
           name="username"
+          placeholder="Netlink@uvic.ca"
           className="rounded border border-gray-400"
         ></input>
       </div>
-      <div className="flex w-full my-4">
+      <div className="flex w-full mt-2">
         <label for="password" className="pr-4 w-full">
           Password:
         </label>
         <input
           type="text"
           name="password"
+          placeHolder="Password"
+          className="rounded border border-gray-400"
+        ></input>
+      </div>
+      <div className="flex w-full my-2">
+        <label for="reenter-password" className="pr-4 w-full">
+          Re-enter Password:
+        </label>
+        <input
+          type="text"
+          name="reenter-password"
+          placeholder="Re-enter Password"
           className="rounded border border-gray-400"
         ></input>
       </div>
@@ -28,17 +41,11 @@ function LoginForm() {
           to="/"
           className="bg-green-600 text-white border border-gray-400 py-1 px-10 rounded-lg"
         >
-          Login
+          Sign Up
         </Link>
       </div>
-      <p className="w-full text-center text-sm mt-4">
-        Don't have an account?{" "}
-        <Link to="/signup" className="text-blue-500 underline">
-          Sign up here
-        </Link>
-      </p>
     </div>
   );
 }
 
-export default LoginForm;
+export default SignupForm;
