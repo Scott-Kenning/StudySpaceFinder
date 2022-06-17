@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ClassroomsPage from "./components/ClassroomsPage";
-import Review from "./components/Review";
+import Group from "./components/Group";
 import Footer from "./components/Footer";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/classrooms" element={<ClassroomsPage />} />
-          <Route path="/review" element={<Review />} />
+          <Route path="/group" element={<Group />} />
         </Routes>
       </div>
       <Footer />

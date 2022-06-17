@@ -13,18 +13,22 @@ function Modal(props) {
         <div className="bg-purple-600 p-2 px-4 border-b border-gray-500">
           <h4 className="text-white text-lg">A101</h4>
         </div>
-        <div className="p-10">
+        <div className="px-10 pt-2">
+          <div className="flex flex-wrap pb-6">
+            <div className="border border-black rounded-full w-4 mr-2 text-center text-xs"><p>i</p></div>
+            <p className="text-xs">You must be signed in to create a group session</p>
+          </div>
           <BookingForm />
         </div>
-        <div className="flex text-right border-t border-gray-500">
+        <div className="flex p-4 px-10 justify-between w-full">
           <button
-            className="m-1 border-radius-2 border-black w-full text-left"
+            className="w-24 shadow bg-gray-400 text-white rounded-md"
             onClick={props.onClose}
           >
-            Close
+            Cancel
           </button>
           <button
-            className="m-1 border-radius-2 border-black"
+            className="w-24 shadow bg-green-600 text-white rounded-md"
             onClick={props.onSubmit}
           >
             Submit

@@ -2,7 +2,6 @@ import { useState } from "react";
 import Modal from "./Modal";
 
 function Card(props) {
-  // const [show, setShow] = useState(false);
   const [booked, setBooked] = useState(false);
 
   const getSeating = () => {
@@ -12,15 +11,6 @@ function Card(props) {
   const getNextAvailable = () => {
     return "10:30 - 11:30";
   };
-
-  const getBuildingAcronym = () => {
-    return null;
-  };
-
-  // const onSubmit = () => {
-  //   setBooked(true);
-  //   setShow(false);
-  // };
 
   const nextAvailable = getNextAvailable();
   const seats = getSeating();
@@ -44,7 +34,7 @@ function Card(props) {
       ) : (
         <button
           onClick={() => setBooked(true)}
-          className="bg-gray-300 rounded w-32 md:mr-10 mr-2 p-2"
+          className="bg-gray-300 rounded w-32 shadow-sm md:mr-10 mr-2 p-2"
         >
           Book
         </button>

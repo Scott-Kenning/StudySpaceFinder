@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Modal from "./Modal";
 
-function ReviewCard(props) {
+function GroupCard(props) {
   const [joined, setJoined] = useState(false);
   const [count, setCount] = useState(props.count || 0);
 
@@ -19,10 +19,10 @@ function ReviewCard(props) {
     <div className="flex bg-white rounded items-center p-2 my-4 shadow-md">
       <div className="w-full">
         <h2 className="text-lg w-full">
-          {props.subject} Review {props.time}
+          {props.subject} group {props.time}
         </h2>
         <p className="text-xs w-full">{props.room}</p>
-        <p className="pt-4">{count} / 120</p>
+        <p className="pt-4">{count} / {count > 120 ? "300" : count > 30 ? "120" : "30"}</p>
       </div>
       <div className="mr-4">
         {!joined ? (
@@ -44,4 +44,4 @@ function ReviewCard(props) {
   );
 }
 
-export default ReviewCard;
+export default GroupCard;

@@ -1,10 +1,10 @@
 import Container from "./Containers/Container";
 import { Link } from "react-router-dom";
-import ReviewCard from "./ReviewCard";
+import GroupCard from "./ReviewCard";
 import { useState } from "react";
 import Modal from "./Modal";
 
-function Review() {
+function Group() {
   const [show, setShow] = useState(false);
   const [booked, setBooked] = useState(false);
 
@@ -26,20 +26,20 @@ function Review() {
         Back
       </Link>
       <h1 className="text-center my-4 text-3xl text-bold w-full">
-        Review Sessions
+        Group Sessions
       </h1>
       <div className="flex justify-center">
         <button
           className="whitespace-nowrap bg-purple-600 text-center text-white rounded-full mb-8 px-2 py-1"
           onClick={() => setShow(true)}
         >
-          + Create a Review Session
+          + Create a Group Session
         </button>
       </div>
       <Modal onSubmit={onSubmit} onClose={() => setShow(false)} show={show} />
       {reviewSessions.map((session) => {
         return (
-          <ReviewCard
+          <GroupCard
             subject={session[0]}
             room={session[1]}
             count={session[2]}
@@ -50,9 +50,9 @@ function Review() {
       {booked ? (
         <div className="flex bg-white rounded items-center p-2 my-4 shadow-md">
           <div className="w-full">
-            <h2 className="text-lg w-full">CHEM 101 Review 12:30 - 2:30</h2>
+            <h2 className="text-lg w-full">CHEM 101 group 12:30 - 2:30</h2>
             <p className="text-xs w-full">BWC A150</p>
-            <p className="pt-4">1 / 120</p>
+            <p className="pt-4">1 / 300</p>
           </div>
           <div className="mr-4">
             <button
@@ -69,4 +69,4 @@ function Review() {
   );
 }
 
-export default Review;
+export default Group;

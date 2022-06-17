@@ -16,7 +16,7 @@ function ClassroomsPage() {
       <Link to="/" className="underline">
         Back
       </Link>
-      <h1 className="text-5xl w-full text-center">
+      <h1 className="text-3xl w-full text-center my-4">
         {building || "All Classrooms"}
       </h1>
       <ClassroomListContainer building={building} />

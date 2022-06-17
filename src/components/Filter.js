@@ -1,4 +1,4 @@
-function Filter() {
+function Filter(props) {
   const options = [
     {
       label: "Sort by Time Available",
@@ -16,7 +16,7 @@ function Filter() {
 
   return (
     <div className="w-full">
-      <select className="bg-gray-100 border-2 border-gray-400 w-min">
+      <select className="bg-gray-100 shadow-lg w-min" onChange={e => props.onChange(e.target.value)}>
         {options.map((option) => {
           return <option value={option.value}>{option.label}</option>;
         })}
